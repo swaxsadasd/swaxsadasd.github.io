@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<link href="app.css" rel="stylesheet"/>
+
+
+<html>
+  <head>
+    <meta charset="ISO-8859-1">
+    <title>Project Companion App</title>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+
+    <div class="topgradient hide" id="turngradient"></div>
+
+    <div class="topscreen">
+      <button class="passbutton upsidedown bottommargin hide" type="button" onclick="P1controller(true); P2controller(false); gradient(false);" id="P1pass">PASS</button>
+      <div class="P2 timer upsidedown topmargin hide" id="P2time">40</div>
+    </div>
+
+    <div class="majormenu" id="startmenu">
+      <button class="majorindicator majorbutton" onclick="startGame();">
+        PLAY
+      </button>
+    </div>
+    
+    <div class="menu hide" id="rulesmenu">
+      <button class="indicator topid" id="valueview" onclick="openValue();">
+        <img src="Higher.png" class="changenumber" id="valueimg"></img>
+        <h1 id="numbertag">Number</h1>
+        <h2>Cost: 5 seconds</h2>
+      </button>
+      <button class="indicator bottomid" id="suitview" onclick="openSuit();">
+        <img src="club.png" class="changesuit" id="suitimg"></img>
+        <h1>Suit</h1>
+        <h2>Cost: 2 seconds</h2>
+      </button>
+    </div>
+
+    <div class="menu hide" id="valuemenu">
+      <button class="indicator topid" onclick="selectValue('Higher');">
+        <img src="Higher.png"></img>
+        <h1>Higher</h1>
+      </button>
+      <button class="indicator bottomid" onclick="selectValue('Lower');">
+        <img src="Lower.png"></img>
+        <h1>Lower</h1>
+      </button>
+    </div>
+
+    <div class="menu hide" id="suitmenu">
+      <button class="halfindicator topid" onclick="selectSuit('spade');">
+        <img src="spade.png"></img>
+      </button>
+      <button class="halfindicator topid" onclick="selectSuit('diamond');">
+        <img src="diamond.png"></img>
+      </button>
+      <button class="halfindicator bottomid" onclick="selectSuit('heart');">
+        <img src="heart.png"></img>
+      </button>
+      <button class="halfindicator bottomid" onclick="selectSuit('club');">
+        <img src="club.png"></img>
+      </button>
+    </div>
+
+    <div class="majormenu hide" id="endmenu">
+      <div class="majorindicator">
+        <h1>Game Over!</h1>
+        <button class="majorbutton" onclick="window.location.reload();" id="retrybutton">Play Again!</button>
+      </div>
+    </div>
+
+    <div class="bottomscreen">
+      <div class="P1 timer bottommargin hide" id="P1time">40</div>
+      <button class="passbutton topmargin hide" type="button" onclick="P1controller(false); P2controller(true); gradient(true);" id="P2pass">PASS</button>
+    </div>
+
+  </body>
+</html>
