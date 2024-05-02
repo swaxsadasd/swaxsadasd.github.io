@@ -68,11 +68,6 @@ function endGame() {
 // -- chess clock and turn swapping -- //
 
 function P1controller(counting) {
-  //if there is an existing interval, reset it
-  if (typeof P1count !== 'undefined') {
-    clearInterval(P1count);
-  }
-
   //resets menu to rulesmenu
   document.getElementById("rulesmenu").classList.remove("hide");
   document.getElementById("valuemenu").classList.add("hide");
@@ -97,10 +92,6 @@ function P1countdown() {
 }
 
 function P2controller(counting) {
-  if (typeof P2count !== 'undefined') {
-    clearInterval(P2count);
-  }
-
   document.getElementById("rulesmenu").classList.remove("hide");
   document.getElementById("valuemenu").classList.add("hide");
   document.getElementById("suitmenu").classList.add("hide");
